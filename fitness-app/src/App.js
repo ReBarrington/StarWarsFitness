@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch, Link } from "react-router-dom";
 import Welcome from "./Components/Welcome";
 import './App.css';
+import ClassList from './Components/ClassList';
 
 function App() {
   return (
@@ -11,7 +12,10 @@ function App() {
         Henry's homepage here
       </Link> */}
       <Switch>
-        <Route path="/welcome">
+        <Route path="/classes">
+          <ClassList />
+        </Route>
+        <Route path="/">
           <Welcome />
         </Route>
       </Switch>

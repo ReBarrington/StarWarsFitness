@@ -40,7 +40,7 @@ const ClassData = [
         max_size: "20"
     },
     { 
-        name: "Sunrise Yoga",
+        name: "Simple Yoga",
         type: "yoga",
         start_time: "9am",
         duration: "90 minutes",
@@ -51,3 +51,5 @@ const ClassData = [
     },
 
 ]
+
+export default ClassData;
