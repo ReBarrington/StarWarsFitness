@@ -12,7 +12,7 @@ const StyledCont = styled.div `
 
 const StyledBox = styled.div `
     border: 5px solid black;
-    width: 40%;
+    width: 300px;
     margin: 1%;
     `
 
@@ -23,9 +23,9 @@ function ClassList() {
         <StyledCont className="ClassList-container">
             {data.map(info => {
                 return (
-                    <StyledBox>
+                    <StyledBox key={info.name}>
                         <ClassCard
-                        key={info.name}
+                        name={info.name}
                         type={info.type}
                         start={info.start_time}
                         duration={info.duration}

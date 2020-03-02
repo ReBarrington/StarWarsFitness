@@ -4,7 +4,7 @@ import React from "react";
 
 const ClassCard = props => {
   return (
-  <div className="class-list" key={props.name}>
+  <div className="class-list" >
     <h2>{props.name}</h2>
     <p>Type: {props.type}</p>
     <p>Start Time: {props.start}</p>
@@ -17,4 +17,4 @@ const ClassCard = props => {
   );
 }
 
-export default ClassCard;
+export default ClassCard
