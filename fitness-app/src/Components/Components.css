@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+
+/* Header.js */
+.header-img {
+  width: 50%;
+}
+
+/* CreateAcct & SignIn */
+
+div .form-container {
+  display: flex;
+  justify-content: center;
+}
+
+div .form {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  padding: 5%;
+  margin: 5%;
+}
