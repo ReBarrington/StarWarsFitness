@@ -1,10 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 .App {
   text-align: center;
+  /* display: flex; */
+  border: red 2px solid;
+  padding: 2%;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Header.js */
-.header-img {
+.Header {
+  border: 2px green solid;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-family: 'Oswald', sans-serif;
+}
+
+.button-container {
+  display: flex;
+  border: 2PX purple solid;
   width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  background-color: #1EA896;
+  padding: 1%;
+  border-radius: 10px;
 }
 
 /* CreateAcct & SignIn */

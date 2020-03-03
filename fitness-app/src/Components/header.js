@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Components.css";
-import SignIn from "./SignIn";
-import CreateAcct from "./CreateAcct";
+import styled from "styled-components";
 
 export default function Header() {
   return (
-    <header>
+    <header className="Header">
         <div className="button-container">
             <Link to="/log-in">
                 <button>Log In</button>
