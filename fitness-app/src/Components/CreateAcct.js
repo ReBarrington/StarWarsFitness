@@ -93,8 +93,7 @@ function CreateAcct({ values, errors, touched, status }) {
             {formInfo.map(info => {
             return (
                 <ul key={info.id}>
-                    <li>First Name: {info.firstname}</li>
-                    <li>Last Name: {info.lastname}</li>
+                    <p>Thank you, {info.firstname}. We have recieved your request for a new account.</p>
                 </ul>
             );
             })}
