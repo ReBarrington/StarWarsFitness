@@ -1,23 +1,15 @@
 import React from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "./Components/header";
 import Welcome from "./Components/Welcome";
 import ClassList from './Components/ClassList';
 import SignIn from './Components/SignIn';
 import CreateAcct from './Components/CreateAcct';
-import styled from "styled-components";
-
-const NoLinkStyle = styled(Link) `
-  text-decoration: none;
-  color: black;
-`
 
 function App() {
   return (
     <div className="App">
-      <NoLinkStyle to="/">
-        <Header />
-      </NoLinkStyle>
+      <Header />
       <Switch>
         <Route path="/log-in">
           <SignIn />

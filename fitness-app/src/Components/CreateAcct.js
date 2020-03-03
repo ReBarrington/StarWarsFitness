@@ -4,11 +4,12 @@ import * as Yup from "yup";
 import axios from "axios";
 import "./Components.css";
 
-function CreateAcct({values, errors, touched, status}) {
+function CreateAcct({ values, errors, touched, status }) {
     const [formInfo, setFormInfo] = useState([]);
 
     useEffect(() => {
         console.log("status has changed!", status);
+        console.log(formInfo);
         status && setFormInfo(formInfo => [...formInfo, status]);
     }, [status]);
 
@@ -87,9 +88,14 @@ function CreateAcct({values, errors, touched, status}) {
                 </label>
                 <button type="submit">Submit!</button>
             </Form>
+            {/* <pre>{JSON.stringify(values, null, 2)}</pre>
+            <pre>{JSON.stringify(errors, null, 2)}</pre> */}
             {formInfo.map(info => {
             return (
-                <h3>{info.name}</h3>
+                <ul key={info.id}>
+                    <li>First Name: {info.firstname}</li>
+                    <li>Last Name: {info.lastname}</li>
+                </ul>
             );
             })}
         </div>
@@ -107,12 +113,14 @@ const FormikCreateAcct = withFormik({
             email: props.email || "",
             password: props.password || "",
             terms: props.terms || "",
-
         };
     },
+
     validationSchema: Yup.object().shape({
-        name: Yup.string().required("NAME IS REQUIRED")
+        firstname: Yup.string().required("FIRST NAME IS REQUIRED"),
+        lastname: Yup.string().required("LAST NAME IS REQUIRED"),
     }),
+
     handleSubmit(values, { setStatus, resetForm }) {
         console.log("submitting", values);
         console.log(values.name, " is username")
