@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+* {
+  font-size: 62.5%;
+}
+
 .App {
   text-align: center;
-  /* display: flex; */
   border: red 2px solid;
-  padding: 2%;
+  padding: 3%;
   font-family: 'Playfair Display', serif;
+  font-size: 8rem;
 }
 
 /* Header.js */
 .Header {
-  border: 2px green solid;
+  border-bottom: #DCF763 dotted 10px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   font-family: 'Oswald', sans-serif;
+  font-size: 6rem;
 }
 
 .button-container {
@@ -30,6 +35,13 @@ button {
   background-color: #1EA896;
   padding: 1%;
   border-radius: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.button-container button {
+  padding: 2%;
+  width: 300px;
 }
 
 /* CreateAcct & SignIn */
@@ -47,6 +59,11 @@ div .form {
   justify-content: center;
   align-items: center;
   border: 5px solid black;
-  padding: 5%;
+  padding: 2%;
   margin: 5%;
+  font-size: 2rem;
+}
+
+.form-container img {
+  width: 50%;
 }
