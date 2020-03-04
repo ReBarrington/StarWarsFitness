@@ -8,6 +8,11 @@ const NoLinkStyle = styled(Link) `
   color: black;
 `
 
+const AnimatedH1 = styled.h1`
+  animation-duration: 2s;
+  animation-name: bounceIn;
+`
+
 export default function Header() {
   return (
     <header className="Header">
@@ -20,7 +25,7 @@ export default function Header() {
             </Link>
         </div>
         <NoLinkStyle to="/">
-            <h1>Anywhere Fitness!</h1>
+            <AnimatedH1>Anywhere Fitness!</AnimatedH1>
         </NoLinkStyle>
       {/* <img className="header-img" src="https://images.unsplash.com/photo-1504025468847-0e438279542c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1735&q=80"></img> */}
     </header>

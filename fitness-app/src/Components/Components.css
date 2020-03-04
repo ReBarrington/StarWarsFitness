@@ -1,13 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    border-color: #DCF763;
+  }
+  50% {
+    border-color: #1EA896; 
+  }
+  100% {
+    border-color: #DCF763;
+  }
+}
+
+
+
+
+
 * {
   font-size: 62.5%;
 }
 
 .App {
   text-align: center;
-  border-bottom: #DCF763 dotted 10px;
+  animation: colorChange 10s infinite;
+  border-bottom: dotted 10px;
   padding-top: 5%;
   margin-bottom: 5%;
   padding: 3%;
@@ -23,7 +55,8 @@
 .Header {
   padding-bottom: 1%;
   margin-bottom: 5%;
-  border-bottom: #DCF763 dotted 10px;
+  animation: colorChange 10s infinite;
+  border-bottom: dotted 10px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;

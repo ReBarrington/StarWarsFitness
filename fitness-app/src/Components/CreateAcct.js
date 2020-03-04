@@ -78,7 +78,7 @@ function CreateAcct({ values, errors, touched, status }) {
                         />
                 </label>
                 <label className="checkbox-container">
-                    Instructor?:
+                    Instructor?
                     <Field
                         type="checkbox"
                         name="terms"
