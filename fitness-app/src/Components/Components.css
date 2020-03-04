@@ -84,6 +84,17 @@ button {
   width: 200px;
 }
 
+.classlist-button button {
+  background: linear-gradient(to right, #DCF763 50%, #1EA896 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.classlist-button button:hover {
+  background-position: left bottom;
+}
+
 /* CreateAcct & SignIn */
 
 div .form-container {
