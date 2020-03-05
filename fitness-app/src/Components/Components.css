@@ -91,6 +91,7 @@ button {
   transition: all .5s ease-out;
 }
 
+/* Animates button to fill with light green as background shifts */
 .classlist-button button:hover {
   background-position: left bottom;
 }
