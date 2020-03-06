@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import ClassData from "./ClassData";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import ClassCard from "./ClassCard";
 import styled from "styled-components";
 
@@ -17,7 +17,17 @@ const StyledBox = styled.div `
     `
 
 function ClassList() {
-    const [data] = useState(ClassData);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios
+          .get('https://swapi.co/api/people')
+          .then(response => {
+            console.log(response.data.results, " is response.data.results")
+            const data = response.data.results;
+            setData(data);
+          })
+      }, []);
 
     return (
         <StyledCont className="ClassList-container">
@@ -26,13 +36,9 @@ function ClassList() {
                     <StyledBox key={info.name}>
                         <ClassCard
                         name={info.name}
-                        type={info.type}
-                        start={info.start_time}
-                        duration={info.duration}
-                        intensity={info.intensity}
-                        location={info.location}
-                        attendees={info.attendees}
-                        maxsize={info.max_size}
+                        height={info.height}
+                        start={info.created}
+                        mass={info.mass}
                         />
                     </StyledBox>
                 )

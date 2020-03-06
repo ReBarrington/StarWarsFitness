@@ -1,19 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 
+const Card = styled.div `
+  background-color: gray;
+  padding: 5%;
+  color: black;
+  `
 
 
 const ClassCard = props => {
+  console.log(props, "props")
   return (
-  <div className="class-list" >
-    <h2>{props.name}</h2>
-    <p>Type: {props.type}</p>
+  <Card className="class-list" >
+    <h2>{props.name}'s Fitness Program</h2>
     <p>Start Time: {props.start}</p>
-    <p>Duration: {props.duration}</p>
-    <p>Intensity: {props.intensity} </p>
-    <p>Location: {props.location} </p>
-    <p>Attendees: {props.attendees} </p>
-    <p>Max-Size: {props.maxsize} </p>
-  </div>
+    <p>Goal Weight: {props.mass}kg</p>
+  </Card>
   );
 }
 
